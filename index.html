@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081626">
+<title>MATH LAB | n-ші дәрежелі түбір</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [["\\(","\\)"]],
+    displayMath: [["\\[","\\]"]]
+  },
+  svg: {fontCache:"global"},
+  startup: {typeset:false}
+};
+</script>
+<script defer
+ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+<script defer src="script.js"></script>
+</head>
+<body>
+
+<div class="app">
+  <header class="header">
+    <div class="brand">
+      <div class="logo">ⁿ√</div>
+      <div>
+        <strong>MATH LAB</strong>
+        <small>§5. Нақты санның n-ші дәрежелі түбірі</small>
+      </div>
+    </div>
+    <div class="head-right">
+      <span class="chip">1 КУРС</span>
+      <span class="chip">80 МИНУТ</span>
+      <span class="chip">⭐ <b id="totalScore">0</b></span>
+      <button id="fullscreen" title="Толық экран">⛶</button>
+    </div>
+  </header>
+
+  <div class="track"><div id="pageFill"></div></div>
+
+  <main id="content"></main>
+
+  <footer class="footer">
+    <div class="stats">
+      <div>
+        <small>🕒 Алматы уақыты</small>
+        <strong id="clock">--:--:--</strong>
+      </div>
+      <div>
+        <small>🌡 Алматы температурасы</small>
+        <strong id="temperature">Жүктелуде...</strong>
+      </div>
+      <div>
+        <small>⏳ Қалған уақыт</small>
+        <strong id="remaining">80:00</strong>
+      </div>
+      <div>
+        <small>⏱ Өткен уақыт</small>
+        <strong id="elapsed">00:00</strong>
+      </div>
+      <div class="timer-buttons">
+        <button id="startTimer">▶ Бастау</button>
+        <button id="pauseTimer">Ⅱ Үзіліс</button>
+        <button id="resetTimer">↻</button>
+      </div>
+    </div>
+
+    <div class="track"><div id="timeFill"></div></div>
+
+    <div class="bottom">
+      <div class="footer-labels">
+        <b>BY DARKHAN</b>
+        <span id="pageCounter">1 / 1</span>
+        <span id="pageLabel">Кіріспе</span>
+      </div>
+      <div class="nav">
+        <button id="prev">← Артқа</button>
+        <button id="next" class="primary">Келесі →</button>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Сол жақтағы басқару -->
+<nav class="side-tools">
+  <button id="jumpTheory">📖 Теория</button>
+  <button id="jumpNotes">📝 Конспект</button>
+  <button id="jumpLevels">📐 4 деңгей</button>
+  <button id="jumpGame">🏆 Ойын</button>
+  <button id="basicLaunch">🧮 Қарапайым</button>
+  <button id="scienceLaunch">∑ Ғылыми</button>
+</nav>
+
+<!-- Қарапайым калькулятор -->
+<section class="calculator" id="calc-basic">
+  <div class="calc-header">
+    <strong>🧮 Қарапайым</strong>
+    <button class="close-calc" data-close="basic">✕</button>
+  </div>
+  <div class="calc-display" id="display-basic">0</div>
+  <div class="keys" id="keys-basic"></div>
+</section>
+
+<!-- Ғылыми калькулятор -->
+<section class="calculator" id="calc-science">
+  <div class="calc-header">
+    <strong>∑ Ғылыми • DEG</strong>
+    <button class="close-calc" data-close="science">✕</button>
+  </div>
+  <div class="calc-display" id="display-science">0</div>
+  <div class="keys" id="keys-science"></div>
+</section>
+
+</body>
+</html>
+
